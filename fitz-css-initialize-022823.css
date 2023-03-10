@@ -1,0 +1,164 @@
+/* box-sizing border-box width & height include padding and border */
+/* set font-size to 16px, 1rem = 16px */
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+      
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+/* initialize all layout params to 0, each grouping of < 10 so class selector overrides */
+html, body, div, span, applet, object, iframe {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font-weight: normal;
+    vertical-align: baseline;
+}
+section, header, footer, menu, nav {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font-weight: normal;
+    vertical-align: baseline;
+}
+h1, h2, h3, h4, h5, h6, p, blockquote, pre {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font-weight: normal;
+    vertical-align: baseline;
+}
+a, em, acronym, address, code, cite {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font-weight: normal;
+    vertical-align: baseline;
+}
+img, ins, q, s, samp {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font-weight: normal;
+    vertical-align: baseline;
+}
+big, small, strike, strong, sub,sup {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font-weight: normal;
+    vertical-align: baseline;
+}
+b, u, i, center {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font-weight: normal;
+    vertical-align: baseline;
+}
+dl, dt, dd, ol, ul, li {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font-weight: normal;
+    vertical-align: baseline;
+}
+fieldset, form, input, label, legend, textarea {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font-weight: normal;
+    vertical-align: baseline;
+}
+table, caption, thead, tbody, tfoot, tr, th, td {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    font-weight: normal;
+    vertical-align: baseline;
+}
+    
+body {
+    line-height: 1;
+}
+
+a, a:hover, a:focus, a:active{
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {                    /* 32 px */
+    font-size: 2rem;
+    font-weight: bold;
+}
+h2 {                    /* 24 px */
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+h3 {                    /* 18.72 px */
+    font-size: 1.17rem;
+    font-weight: bold;
+}
+h4 {                    /* 16 px */
+    font-size: 1rem;
+    font-weight: bold;
+}
+h5 {                    /* 13.28 px */
+    font-size: .83rem;
+    font-weight: bold;
+}
+h6 {                    /* 10.72 px */
+    font-size: .67rem;
+    font-weight: bold;
+}
+    
+ol, ul {
+list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+blockquote, q {
+    quotes: none;
+}
+        
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}     
+                
+
+                
+                
+                       

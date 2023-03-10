@@ -1,0 +1,80 @@
+/* block__element--modifier   .header
+.header__font   .header--red    .header__font--red */
+/* generics   shared    sections */
+
+/* ==== Typography & General Styles ---------------------------*/
+.btn__style {
+    font-size: 2rem;
+    color: black;
+    background-color: white;
+    padding: 0.5em 1em;
+}
+
+
+/* ==== Layout ------------------------------------------------ */
+#body__container {      /* sets selection buttons above grid */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5em;
+    padding: 5em 0;
+}
+#selections__container {        /* container for buttons */
+    border: 0.2em solid red;
+}
+#grid__container {        /* container for grid of squares */
+    border: 0.6em solid black;
+    aspect-ratio: 1 / 1;
+    width: 40em;
+   }
+.grid__row {            /* flex container for row of squares */
+    display: flex;
+    gap: 0;
+}
+.grid__squares {        /* flex container for indiv squares */
+    aspect-ratio: 1 / 1;
+   flex: 1;
+    border: 0.1em solid blue;
+}
+
+/* ==== Colors --------------------------------------------------*/
+.black {
+    background-color: black;
+}
+.white {
+    background-color: white;
+}
+.surprise {
+    background-color: pink;
+}
+.shade {
+    background-color: gray;
+}
+.color--pick {
+    background-color: aquamarine;
+}
+
+
+/* Navigation, Links, Buttons ------------------------------------------- */
+#btn__black {
+    background-color: black;
+    color: white;
+}
+#btn__white {
+    background-color: white;
+}
+#btn__surprise {
+    background-color: pink;
+}
+#btn__gray--tone {
+    background-color: gray;
+}
+#btn__color--pick {
+    background-color: aquamarine;
+}
+
+
+
+/* ==== Page Specifics ++++++++++++++++++++++++++++++++++++++++ */
+
+/* ==== Sections ++++++++++++++++++++++++++++++++++++++++++++++ */
