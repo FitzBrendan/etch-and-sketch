@@ -14,20 +14,27 @@
   </head>
   <body>
 
-    <section id="body__container">
-      <div id="selections__container">
-        <button id="numSquaresPick" class="btn__style">Click to Start a New Drawing<br><i>Choose amount of squares per row / column</i></button>
+    <!-- principal container for user selections and sketch pad grid -->
+    <section id="principal__flex--container">
+
+      <!-- selections container for user input selections -->
+      <div id="selections__flex--container">
+        <button id="numSquaresPick" class="btn__style">
+          Click to Start a New Drawing<br/>
+          <i>Choose amount of squares per row / column</i>
+        </button>
         <button id="btn__black" class="btn__style">Black</button>
         <button id="btn__white" class="btn__style">Eraser</button>
         <button id="btn__surprise" class="btn__style">Surprise Me</button>
         <button id="btn__shading" class="btn__style">Shading</button>
         <button id="btn__color--pick" class="btn__style">Pick a Color</button>
-      
       </div>
 
-      <div id="grid__container">
-        <!-- indiv row divs and column div squares dynamically created in script.js  -->
+      <!-- grid container for sketch pad of pad squares-->
+      <div id="sketch_pad__grid--container" class="sketch_pad">
+        <!-- indiv coloring squares dynamically created in script.js with css grid  -->
       </div>
+
     </section>
 
     <script src="script.js"></script>

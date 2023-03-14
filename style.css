@@ -1,79 +1,73 @@
-/* block__element--modifier   .header
-.header__font   .header--red    .header__font--red */
-/* generics   shared    sections */
+/* selector naming conventions
+element__name_subname__attribute--value   */
 
 /* ==== Typography & General Styles ---------------------------*/
 .btn__style {
-    font-size: 2rem;
-    color: black;
-    background-color: white;
-    padding: 0.5em 1em;
+  font-size: 2rem;
+  color: black;
+  background-color: white;
+  padding: 0.5em 1em;
 }
-
 
 /* ==== Layout ------------------------------------------------ */
-#body__container {      /* sets selection buttons above grid */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 5em;
-    padding: 5em 0;
+#principal__flex--container {
+  /* sets selection buttons above grid */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5em;
+  padding: 5em 0;
 }
-#selections__container {        /* container for buttons */
-    border: 0.2em solid red;
+#selections__flex--container {
+  /* container for buttons */
+  border: 0.2em solid red;
 }
-#grid__container {        /* container for grid of squares */
-    border: 0.6em solid black;
-    aspect-ratio: 1 / 1;
-    width: 40em;
-   }
-.grid__row {            /* flex container for row of squares */
-    display: flex;
-    gap: 0;
+#sketch_pad__grid--container {
+  /* grid container for sketch pad */
+  display: grid;
+  width: 760px;
+  height: 760px;
+  background-color: linen;
 }
-.grid__squares {        /* flex container for indiv squares */
-    aspect-ratio: 1 / 1;
-   flex: 1;
-    border: 0.1em solid blue;
+.pad_square {
+  /* divs for each square in sketch pad */
+  user-select: none;
 }
 
 /* ==== Colors --------------------------------------------------*/
 .black {
-    background-color: black;
+  background-color: black;
 }
 .white {
-    background-color: white;
+  background-color: white;
 }
 .surprise {
-    background-color: pink;
+  background-color: pink;
 }
 .shade {
-    background-color: gray;
+  background-color: gray;
 }
 .color--pick {
-    background-color: aquamarine;
+  background-color: aquamarine;
 }
-
 
 /* Navigation, Links, Buttons ------------------------------------------- */
 #btn__black {
-    background-color: black;
-    color: white;
+  background-color: black;
+  color: white;
 }
 #btn__white {
-    background-color: white;
+  background-color: white;
 }
 #btn__surprise {
-    background-color: pink;
+  background-color: pink;
 }
 #btn__gray--tone {
-    background-color: gray;
+  background-color: gray;
 }
 #btn__color--pick {
-    background-color: aquamarine;
+  background-color: aquamarine;
 }
-
-
 
 /* ==== Page Specifics ++++++++++++++++++++++++++++++++++++++++ */
 
