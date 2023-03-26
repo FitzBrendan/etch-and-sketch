@@ -1,74 +1,113 @@
-/* selector naming conventions
-element__name_subname__attribute--value   */
+/* Etch & Sketch */
 
-/* ==== Typography & General Styles ---------------------------*/
-.btn__style {
-  font-size: 2rem;
+/* naming convention    
+long_name
+.parent__child--modifier
+f--  flex container 
+g--  grid container
+*/
+
+/* ==== Typography & General Styles ====*/
+
+/* ==== Colors ==== */
+
+/* ====Navigation, Links, Buttons ==== */
+
+.btn--generic {
+  font-size: 1.5rem;
   color: black;
   background-color: white;
   padding: 0.5em 1em;
+  border-radius: 1em;
 }
-
-/* ==== Layout ------------------------------------------------ */
-#principal__flex--container {
-  /* sets selection buttons above grid */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 5em;
-  padding: 5em 0;
-}
-#selections__flex--container {
-  /* container for buttons */
-  border: 0.2em solid red;
-}
-#sketch_pad__grid--container {
-  /* grid container for sketch pad */
-  display: grid;
-  width: 760px;
-  height: 760px;
-  background-color: linen;
-}
-.pad_square {
-  /* divs for each square in sketch pad */
-  user-select: none;
-}
-
-/* ==== Colors --------------------------------------------------*/
-.black {
-  background-color: black;
-}
-.white {
-  background-color: white;
-}
-.surprise {
-  background-color: pink;
-}
-.shade {
-  background-color: gray;
-}
-.color--pick {
-  background-color: aquamarine;
-}
-
-/* Navigation, Links, Buttons ------------------------------------------- */
-#btn__black {
+.f--color_pick__btn--black {
   background-color: black;
   color: white;
 }
-#btn__white {
-  background-color: white;
-}
-#btn__surprise {
-  background-color: pink;
-}
-#btn__gray--tone {
-  background-color: gray;
-}
-#btn__color--pick {
+.f--color_pick__btn--pick_color {
   background-color: aquamarine;
 }
+.f--color_pick__btn--surprise {
+  background-color: green;
+}
+.f--color_pick__btn--random {
+  background-color: tomato;
+}
 
-/* ==== Page Specifics ++++++++++++++++++++++++++++++++++++++++ */
 
-/* ==== Sections ++++++++++++++++++++++++++++++++++++++++++++++ */
+/* ==== Layout ==== */
+
+/* <main> f-- for user selections and sketchPad */
+.f--main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  padding: 1em 0;
+}
+/* <section> f-- color picks, pen swatch, new sketchPad */
+.f--main__f--selections {
+  display: flex;
+  gap: 3em;
+}
+/* <div> f-- color picks */
+.f--selections__f--color_pick {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+/* <div> f-- pen swatch */
+.f--selections__f--pen_color {
+  display: flex;
+  flex-direction: column;
+  min-width: 6em;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+  }
+/* <div> color swatch */
+.f--pen_color__color_swatch {
+  min-width: 3em;
+  aspect-ratio: 1 / 1;
+  border: solid 0.12em black;
+  border-radius: 50%;
+}
+/* <div> f-- new sketchPad, shading, color over  */
+.f--selections__f--new_pad {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  justify-content: space-around;
+   }
+/* <section> f-- eraser, grid lines, clear grid */
+.f--main__f--eraser {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+}
+/* set columns for <section> f--eraser */
+.equal_columns {
+  min-width: 9.5em;
+}
+/* <section> g-- sketchPad for padSquares */
+.f--main__g--sketch_pad {
+  display: grid;
+  width: 700px;
+  height: 700px;
+  border: 1px solid #787878;
+  user-select: none;
+}
+/* <div> - for each padSquare in sketchPad */
+.pad_square {
+}
+.grid_lines {
+  border: solid 0.09em rgb(236, 15, 15);
+}
+
+
+
+
+
+/* ==== Page Specifics ++++ */
+
+/* ==== Sections ++++ */

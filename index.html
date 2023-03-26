@@ -14,28 +14,47 @@
   </head>
   <body>
 
-    <!-- principal container for user selections and sketch pad grid -->
-    <section id="principal__flex--container">
+    <!-- main flex container for user selections and sketchPad -->
+    <main class="f--main">
 
-      <!-- selections container for user input selections -->
-      <div id="selections__flex--container">
-        <button id="numSquaresPick" class="btn__style">
-          Click to Start a New Drawing<br/>
-          <i>Choose amount of squares per row / column</i>
-        </button>
-        <button id="btn__black" class="btn__style">Black</button>
-        <button id="btn__white" class="btn__style">Eraser</button>
-        <button id="btn__surprise" class="btn__style">Surprise Me</button>
-        <button id="btn__shading" class="btn__style">Shading</button>
-        <button id="btn__color--pick" class="btn__style">Pick a Color</button>
-      </div>
+      <!-- color picks, pen swatch, new sketchPad - flex container -->
+      <section class="f--main__f--selections">
 
-      <!-- grid container for sketch pad of pad squares-->
-      <div id="sketch_pad__grid--container" class="sketch_pad">
-        <!-- indiv coloring squares dynamically created in script.js with css grid  -->
-      </div>
+        <div class="f--selections__f--color_pick">
+          <button class="f--color_pick__btn--black btn--generic">Black</button>
+          <button class="f--color_pick__btn--pick_color btn--generic">Pick a Color</button>
+          <button class="f--color_pick__btn--surprise btn--generic">Surprise Me</button>
+          <button class="f--color_pick__btn--random btn--generic">Random</button>
+        </div>
 
-    </section>
+        <div class="f--selections__f--pen_color">
+          <h2 class="f--pen_color__pen--content">Pen</h2>
+          <div class="f--pen_color__color_swatch"></div>
+        </div>
+
+        <div class="f--selections__f--new_pad">
+          <button class="f--new_pad__btn--new_sketch-pad btn--generic">
+            New Sketch Pad<br/>
+          </button>
+          <button class="f--new_pad__btn--shading btn--generic">Shading</button>
+          <button class="f--new_pad__btn--color_over btn--generic">Color Over</button>
+        </div>
+
+      </section>
+        
+      <!-- eraser, grid lines, clear grid - flex container -->
+      <section class="f--main__f--eraser">
+        <button class="f--eraser__btn--eraser btn--generic equal_columns">Eraser</button>
+        <button class="f--eraser__btn--lines btn--generic equal_columns">Grid Lines</button>
+        <button class="f--eraser__btn--clear btn--generic equal_columns">Clear Grid</button>
+      </section>
+
+      <!-- sketchPad grid container for padSquares-->
+      <section class="f--main__g--sketch_pad">
+        <!-- indiv coloring padSquares dynamically created in script.js with css grid  -->
+      </section>
+
+    </main>
 
     <script src="script.js"></script>
   </body>
