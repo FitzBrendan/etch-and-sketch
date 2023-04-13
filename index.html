@@ -1,3 +1,13 @@
+<!-- Naming Convention
+  p--parent id    used as class name of direct children (p--) (p--f__) (p--g__)
+  f__             flex container
+  g__             grid container
+  __              double underscore separates elements/blocks (div__element)
+  _               single underscore separates multi word names (long_name)
+  --              double dash before modifier/value (--value)
+  -               single dash reserved only for html key words
+-->
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -7,53 +17,72 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="fitz-css-initialize-022823.css"
-    />
+      href="fitz-css-initialize-022823.css" />
     <link rel="stylesheet" type="text/css" href="style.css" />
     <title>Etch & Sketch</title>
   </head>
   <body>
 
     <!-- main flex container for user selections and sketchPad -->
-    <main class="f--main">
+    <main id="f__main" class="p--body">
 
       <!-- color picks, pen swatch, new sketchPad - flex container -->
-      <section class="f--main__f--selections">
+      <section id="f__color_selections" class="p--f__main">
 
-        <div class="f--selections__f--color_pick">
-          <button class="f--color_pick__btn--black btn--generic">Black</button>
-          <button class="f--color_pick__btn--pick_color btn--generic">Pick a Color</button>
-          <button class="f--color_pick__btn--surprise btn--generic">Surprise Me</button>
-          <button class="f--color_pick__btn--random btn--generic">Random</button>
+        <div id="f__buttons--colors" class="p--f__color_selections">
+          <button id="btn--black" class="p--f__buttons--colors btn--generic">
+            Black</button>
+          <button id="btn--random" class="p--f__buttons--colors btn--generic">
+            Computer Pick</button>
+          <button id="btn--surprise" class="p--f__buttons--colors btn--generic">
+            Surprise Me</button>
         </div>
 
-        <div class="f--selections__f--pen_color">
-          <h2 class="f--pen_color__pen--content">Pen</h2>
-          <div class="f--pen_color__color_swatch"></div>
+        <div id="f__title__swatch__pick_color" class="p--f__color_selections">
+          <div id="f__title__swatch" class="p--f__title__swatch__pick_color">
+            <h2 id="pen--title" class="p--f__title__swatch">Pen</h2>
+            <div id="swatch--color" class="p--f__title__swatch"></div>
+          </div>
+          <div id="f__label__pick_color" class="p--f__title__swatch__pick_color">
+            <label id="label--color_picker" class="p--f__label__pick_color btn--generic" for="color_picker">
+              Pick a Color</label>
+            <div id="div--color_picker" class="p--f__label__pick_color">
+              <input id="color_picker" class="p--div--color_picker" name="color_picker" type="color" value="#F9FB83">
+            </div>
+          </div>
         </div>
 
-        <div class="f--selections__f--new_pad">
-          <button class="f--new_pad__btn--new_sketch-pad btn--generic">
-            New Sketch Pad<br/>
+        <div id="f__buttons--new__shading_over" class="p--f__color_selections">
+          <button id="btn--new_sketch_pad" class="p--f__buttons--new__shading_over btn--generic">
+            New Sketch Pad<br />
           </button>
-          <button class="f--new_pad__btn--shading btn--generic">Shading</button>
-          <button class="f--new_pad__btn--color_over btn--generic">Color Over</button>
+          <button id="btn--shading" class="p--f__buttons--new__shading_over btn--generic">
+            Shading</button>
+          <button id="btn--color_over" class="p--f__buttons--new__shading_over btn--generic">
+            Color Over
+          </button>
         </div>
 
       </section>
-        
+
       <!-- eraser, grid lines, clear grid - flex container -->
-      <section class="f--main__f--eraser">
-        <button class="f--eraser__btn--eraser btn--generic equal_columns">Eraser</button>
-        <button class="f--eraser__btn--lines btn--generic equal_columns">Grid Lines</button>
-        <button class="f--eraser__btn--clear btn--generic equal_columns">Clear Grid</button>
+      <section id="f__eraser__lines__clear" class="p--f__main">
+        <button id="btn--eraser" class="p--f__eraser__lines__clear btn--generic equal_columns">
+          Eraser
+        </button>
+        <button id="btn--grid_lines" class="p--f__eraser__lines__clear btn--generic equal_columns">
+          Hide Grid Lines
+        </button>
+        <button id="btn--clear" class="p--f__eraser__lines__clear btn--generic equal_columns">
+          Clear Sketch Pad
+        </button>
       </section>
 
       <!-- sketchPad grid container for padSquares-->
-      <section class="f--main__g--sketch_pad">
+      <section id="g__sketch_pad" class="p--f__main">
         <!-- indiv coloring padSquares dynamically created in script.js with css grid  -->
       </section>
-
+      
     </main>
 
     <script src="script.js"></script>
